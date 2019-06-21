@@ -12,8 +12,8 @@
 %%
 
 [ \t]	;
-[0-9]+\.[0-9]+ 	{yylval.fval = atof(yytext); return T_FLOAT;}
-[0-9]+		{yylval.ival = atoi(yytext); return V_INT;}
+[0-9]+\.[0-9]+ 	{yylval.valor_float = atof(yytext); return T_FLOAT;}
+[0-9]+		{yylval.valor_inteiro = atoi(yytext); return V_INT;}
 \n		{return NEWLINE;}
 "+"		{return SOMA;}
 "-"		{return SUBTRAI;}
